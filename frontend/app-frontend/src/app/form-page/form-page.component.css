@@ -1,0 +1,26 @@
+.header {
+  text-align: center;
+  margin: 30px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  text-align: center;
+}
+form button {
+  margin: 15px;
+}
+
+mat-form-field {
+  display: block;
+  max-width: 200px;
+}
+
+.admin-button {
+  text-align: center;
+  margin: 15px;
+}

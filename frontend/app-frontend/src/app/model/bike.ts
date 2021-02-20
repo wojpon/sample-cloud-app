@@ -1,4 +1,4 @@
-export interface Bike {
+export class Bike {
   name: string;
   email: string;
   phone: string;

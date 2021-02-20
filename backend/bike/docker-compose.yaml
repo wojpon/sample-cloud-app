@@ -1,0 +1,26 @@
+version: "3"
+services:
+  bike-app-backend:
+    container_name: bike-app-backend
+    image: wojpon/bike-app-backend:1.1
+    ports:
+    - "8080:8080"
+    networks:
+      - bike-app-network
+  bike-app-frontend:
+    container_name: bike-app-frontend
+    image: wojpon/bike-app-frontend:1.0
+    ports:
+    - "9080:80"
+    networks:
+      - bike-app-network
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+    - "27017:27017"
+    networks:
+      - bike-app-network
+networks:
+  bike-app-network:
+    driver: bridge
