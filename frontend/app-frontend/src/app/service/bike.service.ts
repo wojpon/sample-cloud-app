@@ -1,17 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Bike } from '../model/bike';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BikeService {
-  url = 'http://localhost:8080/api/v1/bikes';
+  url = environment.BACKEND_API_URL + '/bikes';
 
   constructor(private http: HttpClient) {}
 
   getAllBikes(): Observable<Bike[]> {
+    console.log(this.url)
     return this.http.get<Bike[]>(this.url);
   }
 

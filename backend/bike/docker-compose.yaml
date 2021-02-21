@@ -17,6 +17,8 @@ services:
   mongodb:
     container_name: mongodb
     image: mongo
+    volumes:
+    - /Users/i517596/mongo/data:/data/db
     ports:
     - "27017:27017"
     networks:
